@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="lab5.css">
+    <title>Document</title>
+    <style>
+
+        
+ .container{
+    color: rgb(2, 2, 2);
+    text-shadow: 0 0 2px black;
+    background-image: url(img/cảm\ ơn\ 1.png);
+    background-size: 150px;
+    background-position: 1px center;
+    background-repeat: no-repeat;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient rgb(95, 196, 247);
+    padding: 10px 10px;
+    
+}
+body{
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient rgb(95, 196, 247);
+}
+.container .title{
+ font-size: 30px;
+ font-weight: bold;
+ color: rgb(0, 0, 0);
+ margin-bottom: 25px;
+ display: flex ;
+ justify-content: center;
+ 
+}
+.form-group{
+    margin: 50px 5px;
+}
+.form-control{
+    width: 95%;
+    padding: 5px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.form-control:focus{
+    background-color:aqua;
+    box-shadow: 0 0 5px rgb(236, 63, 63);
+}
+
+.from-button{
+    background: white;
+    box-shadow: 0 0 5px white;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgb(61, 94, 186);
+}
+.from-button:disabled{
+   background-color: rgb(255, 218, 53);
+    box-shadow: 0 0 20px rgb(200, 226, 230);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*chung*/
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+.cursor{
+    cursor: pointer;
+}
+.thaymau{
+    color: #fff!important;
+}
+.row {
+    margin-left: -10px;
+    margin-right: -10px;
+    
+}
+.row-bottom{
+    padding-bottom: 50px;
+}
+.row::after{
+    content:'';
+    display: block;
+    clear:both;
+}
+.colum-bacot{
+    width: calc(100% /3);
+}
+.colum{
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    
+}
+.text-align{
+    text-align: center !important;
+}
+.colum-haicot{
+    width: 50%;
+
+}
+.colum-motcot{
+    width: 100%;
+}
+#header{
+    background-color: #000;
+    height: 46px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    /* overflow: hidden; */
+}
+
+#navi{
+    display: inline-block;
+}
+
+#navi > li{
+    display: inline-block;
+    line-height: 46px;
+    list-style: none;
+    position: relative;
+    min-width: 128px;
+    text-align: center;
+}
+
+#navi > li > a{
+    text-decoration: none;
+    padding: 0 24px;
+    color: #fff;
+    text-transform: uppercase;
+}
+#navi > li:hover{
+    background-color: #aaa;
+    color: #fff;
+    
+}
+#navi .more1{
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    min-width: 128px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    list-style: none;
+    
+}
+#navi .more1 li:hover{
+    background-color: #aaa;
+    display: block;
+}
+.more1 li{
+    position: relative;
+}
+.more1 li a{
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    
+}
+#navi li:hover .more1{
+    display: block;
+}
+.more1 .more2{
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transform : translate(128px , -46px);
+    display: none;
+}
+.more1 .more2 li{
+    list-style: none;
+}
+.more1 .more2 a{
+    
+}
+.more1 li:hover .more2{
+    display: block;
+}
+#navi .down1{
+    font-size: 60%;
+}
+#header #search{
+    float: right;
+    line-height: 46px;
+    /* display: none; */
+
+    
+}
+#header #search .header-search{
+    color: #fff;
+    padding: 0 20px;
+}
+#header #search:hover{
+    background-color: #aaa;
+}  
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div id="header">
+            <!--bat dau phan navi-->
+            <ul id="navi">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="#band">Giới Thiệu</a></li>
+                <li><a href="gopy.html">góp ý</a></li>
+                <li><a href="/hoatdong.html">Tài nguyên
+                      
+                    </a>
+                </li>
+                <li><a href="#contact">Liên hệ</a></li>
+                
+            </ul>
+            <!--ket thuc phan navi-->
+            <!--bat dau phan search-->
+            <div id="search" class="cursor">
+                <i class="header-search fa-solid fa-magnifying-glass"></i>
+            </div>
+            <!--ket thuc phan search-->
+            <!--bat dau phan menu-->
+            <div id="menu">
+                <i class="menu-search fa-sharp fa-solid fa-bars"></i>
+            </div>
+            <!--ket thuc phan menu-->              
+        </div>
+        <from action="#" method="post">
+            <div class="title"></div>
+            <img src="./anh/anh11.jpg" alt="" width="870" height="200" >
+            <div class="wrapper">
+                <div class="khung">
+                    <h3>Góp ý về sản phẩm </h3>
+                    <div class="head">
+                        <label for="tentask">Tên </label>
+                        <div class="div_tentask"><input type="text" id="tentask"></div>
+                        <p class="thongbao">xin chao</p>
+                        <label for="mota">Góp ý </label>
+                        <textarea name="" id="mota" cols="30" rows="7"></textarea>
+                        <p class="thongbao"></p>
+                        <button onclick="addtask()" id="add">ADD</button>
+                    </div>
+                    <span>Danh sách tên </span>
+                </div>
+                <div class="display" id="display">
+                    <div>
+                        <span>1</span>
+                        <span>demotest</span>
+                        <span>Sữa ok  ...</span>
+                        <button>Delete</button>
+                        <button>Edit</button>
+                    </div>
+                    <div>
+                        <span>1</span>
+                        <span>demotest</span>
+                        <span>like </span>
+                        <button>Delete</button>
+                        <button>Edit</button>
+                    </div>
+            
+                </div>
+                <div class="gallery">
+                    <div class="chinhsua">
+                            <i class="fa-solid fa-xmark" id="close"></i>
+                            <label for="tentask_edit">Tên task</label>
+                            <input type="text" id="tentask_edit">
+                            <p class="thongbao_edit">xin chao</p>
+                            <label for="mota_edit">Mô Tả</label>
+                            <textarea name="" id="mota_edit" cols="30" rows="7"></textarea>
+                            <p class="thongbao_edit"></p>
+                            <hr>
+                            <button id="add_edit">Cập Nhật</button>
+                    </div>
+                </div>
+            </div>
+            
+        </from>
+    </div>
+    <script src="./lab5.js"></script>
+</body>
+</html>
